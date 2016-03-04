@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+*:not(body):not(html) {
+  border:0.5px dashed #000;
+}
+
+.main {
+  width: 100vw;
+  height: 80vh;
+  background: url('../img/mainbackground.jpg') top center no-repeat;
+  background-size: cover;
+  .centerBanner {
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
