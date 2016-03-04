@@ -8,6 +8,7 @@ $min-screen-width: 1045px;
   align-items: center;
   padding: 1vw;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -19,6 +20,7 @@ $min-screen-width: 1045px;
     filter: invert(1);
   }
 }
+
 .navLinks{
   display: none;
   @media only screen and (min-width: $min-screen-width) {

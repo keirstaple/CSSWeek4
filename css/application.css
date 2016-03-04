@@ -440,7 +440,7 @@ body {
   position: absolute;
   width: 1px; }
 
-.navbar {
+.navbar, .secondNavbar {
   display: flex;
   align-items: center;
   padding: 1vw; }
@@ -521,14 +521,36 @@ html {
     .main .centerBanner img {
       width: 100px;
       height: auto; }
+    .main .centerBanner #arcticBanner {
+      font-size: 50px; }
     .main .centerBanner #exploreBelow {
       cursor: pointer;
       color: white;
       background-color: #DC7725;
-      margin: 80px 0 -50px 0; }
+      margin: 70px 0 -40px 0; }
   @media only screen and (min-width: 1045px) {
     .main {
       height: 100vh;
       width: 100vw; } }
+
+.secondNavbar {
+  background-color: #323232; }
+  .secondNavbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw; }
+    .secondNavbar ul li {
+      color: #868686; }
+      .secondNavbar ul li:hover {
+        color: white; }
+    .secondNavbar ul #home {
+      color: white; }
+    .secondNavbar ul #more {
+      color: #DC7725;
+      border-left: 1px solid #5D5D5A;
+      padding-left: 15px; }
+  .secondNavbar .hiddenDropDown {
+    display: none; }
 
 /*# sourceMappingURL=application.css.map */
