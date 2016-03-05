@@ -440,7 +440,7 @@ body {
   position: absolute;
   width: 1px; }
 
-.navbar, .secondNavbar {
+.navbar {
   display: flex;
   align-items: center;
   padding: 1vw; }
@@ -534,23 +534,69 @@ html {
       width: 100vw; } }
 
 .secondNavbar {
-  background-color: #323232; }
-  .secondNavbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    width: 50vw; }
-    .secondNavbar ul li {
-      color: #868686; }
-      .secondNavbar ul li:hover {
-        color: white; }
-    .secondNavbar ul #home {
-      color: white; }
-    .secondNavbar ul #more {
-      color: #DC7725;
-      border-left: 1px solid #5D5D5A;
-      padding-left: 15px; }
-  .secondNavbar .hiddenDropDown {
-    display: none; }
+  display: none; }
+  @media only screen and (min-width: 960px) {
+    .secondNavbar {
+      display: flex;
+      align-items: center;
+      padding: 1vw;
+      background-color: #323232; }
+      .secondNavbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 50vw; }
+        .secondNavbar ul li {
+          color: #868686; }
+          .secondNavbar ul li:hover {
+            color: white; }
+        .secondNavbar ul #home {
+          color: white; }
+        .secondNavbar ul #more {
+          color: #DC7725;
+          border-left: 1px solid #5D5D5A;
+          padding-left: 15px; }
+      .secondNavbar .hiddenDropDown {
+        display: none; } }
+
+.pictureBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D1D1C9; }
+  .pictureBoxes .tripRow .tripBox {
+    margin: 2vh 1vw;
+    width: 90vw;
+    min-height: 250px;
+    height: auto;
+    border-radius: 3px;
+    position: relative; }
+    @media only screen and (min-width: 768px) {
+      .pictureBoxes .tripRow .tripBox {
+        margin: 0;
+        min-height: 420px;
+        width: 100vw; } }
+    .pictureBoxes .tripRow .tripBox .tripsLinks {
+      position: relative;
+      left: 2%;
+      top: 20%; }
+  .pictureBoxes .tripRow #rafting {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg");
+    background-size: cover; }
+  .pictureBoxes .tripRow #baseCamp {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg");
+    background-size: cover; }
+  .pictureBoxes .tripRow #backpacking {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg");
+    background-size: cover; }
+  .pictureBoxes .tripRow #canoe {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg");
+    background-size: cover; }
+  .pictureBoxes .tripRow #photography {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg");
+    background-size: cover; }
+  .pictureBoxes .tripRow #custom {
+    background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg");
+    background-size: cover; }
 
 /*# sourceMappingURL=application.css.map */

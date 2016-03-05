@@ -1,4 +1,5 @@
 $min-screen-width: 1045px;
+$min-screen-trip-width: 768px;
 
 html {
   box-sizing: border-box; }
@@ -45,30 +46,85 @@ html {
 }
 
 .secondNavbar {
-  @extend .navbar;
-  background-color: #323232;
-  ul {
-    list-style-type: none;
+  display: none;
+  @media only screen and (min-width: 960px) {
     display: flex;
-    justify-content: space-between;
-    width: 50vw;
-    li {
-      color: #868686;
-      &:hover {
+    align-items: center;
+    padding: 1vw;
+    background-color: #323232;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      width: 50vw;
+      li {
+        color: #868686;
+        &:hover {
+          color: white;
+        }
+      }
+      #home {
         color: white;
       }
+      #more {
+        color: #DC7725;
+        border-left: 1px solid #5D5D5A;
+        padding-left: 15px;
+      }
     }
-    #home {
-      color: white;
+    .hiddenDropDown {
+      display: none;
     }
-    #more {
-      color: #DC7725;
-      border-left: 1px solid #5D5D5A;
-      padding-left: 15px;
-    }
-
   }
-  .hiddenDropDown {
-    display: none;
+}
+
+.pictureBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D1D1C9;
+  .tripRow {
+    .tripBox {
+      margin: 2vh 1vw;
+      width: 90vw;
+      min-height: 250px;
+      height: auto;
+      border-radius: 3px;
+      position: relative;
+      @media only screen and (min-width: $min-screen-trip-width) {
+        margin: 0;
+        min-height: 420px;
+        width: 100vw;
+      }
+      .tripsLinks {
+        position: relative;
+        left: 2%;
+        top: 20%;
+      }
+    }
+    #rafting {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg");
+      background-size: cover;
+    }
+    #baseCamp {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg");
+      background-size: cover;
+    }
+    #backpacking {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg");
+      background-size: cover;
+    }
+    #canoe {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg");
+      background-size: cover;
+    }
+    #photography {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg");
+      background-size: cover;
+    }
+    #custom {
+      background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg");
+      background-size: cover;
+    }
   }
 }
