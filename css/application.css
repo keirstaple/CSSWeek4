@@ -592,11 +592,11 @@ html {
       left: 50%;
       background-color: #444444;
       opacity: 0.8;
-      border-radius: 100%;
+      border-radius: 100% 100%;
       transition: all .2s ease-in-out; }
       .pictureBoxes .tripRow .tripBox .circle img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         padding: 10px; }
   .pictureBoxes .tripRow #rafting {
     background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg");
