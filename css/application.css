@@ -501,9 +501,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-*:not(body):not(html) {
-  border: 0.5px dashed #000; }
-
 .main {
   width: 100vw;
   height: 80vh;
@@ -563,6 +560,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #D1D1C9; }
   .pictureBoxes .tripRow .tripBox {
     margin: 2vh 1vw;
@@ -570,16 +568,36 @@ html {
     min-height: 250px;
     height: auto;
     border-radius: 3px;
-    position: relative; }
+    position: relative;
+    color: white; }
+    .pictureBoxes .tripRow .tripBox:hover .circle {
+      transform: scale(1.2); }
     @media only screen and (min-width: 768px) {
       .pictureBoxes .tripRow .tripBox {
         margin: 0;
         min-height: 420px;
         width: 100vw; } }
     .pictureBoxes .tripRow .tripBox .tripsLinks {
-      position: relative;
-      left: 2%;
-      top: 20%; }
+      position: absolute;
+      left: 40px;
+      bottom: 40px; }
+      .pictureBoxes .tripRow .tripBox .tripsLinks .orangeLine {
+        background: #dc7725;
+        height: 5px;
+        width: 40px;
+        margin-bottom: 15px; }
+    .pictureBoxes .tripRow .tripBox .circle {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      background-color: #444444;
+      opacity: 0.8;
+      border-radius: 100%;
+      transition: all .2s ease-in-out; }
+      .pictureBoxes .tripRow .tripBox .circle img {
+        width: 60px;
+        height: 60px;
+        padding: 10px; }
   .pictureBoxes .tripRow #rafting {
     background: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg");
     background-size: cover; }

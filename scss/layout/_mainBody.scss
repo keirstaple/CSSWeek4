@@ -7,9 +7,9 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-*:not(body):not(html) {
-  border:0.5px dashed #000;
-}
+// *:not(body):not(html) {
+//   border:0.5px dashed #000;
+// }
 
 .main {
   width: 100vw;
@@ -82,7 +82,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #D1D1C9;
+  // @media only screen and (min-width: $min-screen-trip-width) {
+  //   flex-direction: row;
+  //   align-items: flex-start;
+  // }
   .tripRow {
     .tripBox {
       margin: 2vh 1vw;
@@ -91,15 +96,41 @@ html {
       height: auto;
       border-radius: 3px;
       position: relative;
+      color: white;
+      &:hover {
+        .circle {
+          transform: scale(1.2);
+        }
+      }
       @media only screen and (min-width: $min-screen-trip-width) {
         margin: 0;
         min-height: 420px;
         width: 100vw;
       }
       .tripsLinks {
-        position: relative;
-        left: 2%;
-        top: 20%;
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        .orangeLine {
+          background: #dc7725;
+          height: 5px;
+          width: 40px;
+          margin-bottom: 15px;
+        }
+      }
+      .circle {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        background-color: #444444;
+        opacity: 0.8;
+        border-radius: 100%;
+        transition: all .2s ease-in-out;
+        img {
+          width: 60px;
+          height: 60px;
+          padding: 10px;
+        }
       }
     }
     #rafting {
